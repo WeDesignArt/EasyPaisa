@@ -1,0 +1,222 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px;
+  overflow: hidden;
+  background: linear-gradient(180deg, $color-white 0%, $color-light-mint 100%);
+
+  .hero-bg-shape {
+    position: absolute;
+    right: -10%;
+    top: -10%;
+    width: 700px;
+    height: 700px;
+    border-radius: $radius-full;
+    background: radial-gradient(circle, rgba($color-primary, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+
+    @include respond-down('lg') {
+      width: 400px;
+      height: 400px;
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: $spacer-sm;
+    font-size: $font-size-xs;
+    color: $color-muted-text;
+    margin-bottom: $spacer-xl;
+
+    a {
+      color: $color-dark-text;
+      font-weight: $font-weight-medium;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    span {
+      color: $color-primary;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .hero-title {
+    font-size: $font-size-5xl;
+    font-weight: $font-weight-extrabold;
+    line-height: $line-height-tight;
+    margin-bottom: $spacer-lg;
+    max-width: 540px;
+
+    @include respond-down('lg') {
+      font-size: $font-size-4xl;
+    }
+
+    @include respond-down('md') {
+      font-size: $font-size-3xl;
+    }
+
+    @include respond-down('mobile') {
+      font-size: $font-size-2xl;
+    }
+
+    .highlight {
+      color: $color-primary;
+    }
+  }
+
+  .hero-desc {
+    font-size: $font-size-md;
+    color: $color-muted-text;
+    line-height: $line-height-relaxed;
+    margin-bottom: $spacer-2xl;
+    max-width: 480px;
+
+    @include respond-down('md') {
+      font-size: $font-size-base;
+    }
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: $spacer-md;
+    flex-wrap: wrap;
+  }
+
+  .hero-visual {
+    position: relative;
+    @include flex-center;
+    min-height: 500px;
+
+    @include respond-down('lg') {
+      min-height: 400px;
+    }
+  }
+
+  .hero-main-image {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border-radius: $radius-container;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include respond-down('lg') {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  }
+
+  .hero-bg-circle {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: $radius-full;
+    background: radial-gradient(circle, rgba($color-primary, 0.2) 0%, rgba($color-primary, 0.05) 60%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    @include respond-down('lg') {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  .floating-card {
+    position: absolute;
+    z-index: 3;
+    animation: float 3s ease-in-out infinite;
+
+    &--1 {
+      top: 10%;
+      right: 5%;
+      animation-delay: 0s;
+    }
+
+    &--2 {
+      bottom: 20%;
+      left: 5%;
+      animation-delay: 0.5s;
+    }
+
+    &--3 {
+      top: 30%;
+      left: -5%;
+      animation-delay: 1s;
+
+      @include respond-down('lg') {
+        display: none;
+      }
+    }
+
+    &--4 {
+      bottom: 10%;
+      right: 15%;
+      animation-delay: 1.5s;
+
+      @include respond-down('lg') {
+        display: none;
+      }
+    }
+  }
+
+  .floating-badge {
+    @include glass-effect;
+    border-radius: $radius-card;
+    padding: $spacer-md $spacer-lg;
+    box-shadow: $shadow-lg;
+    display: flex;
+    align-items: center;
+    gap: $spacer-md;
+    min-width: 160px;
+
+    .badge-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: $radius-sm;
+      @include flex-center;
+      font-size: $font-size-lg;
+      flex-shrink: 0;
+    }
+
+    .badge-info {
+      .badge-label {
+        font-size: $font-size-xs;
+        color: $color-muted-text;
+        margin-bottom: 2px;
+      }
+
+      .badge-value {
+        font-size: $font-size-base;
+        font-weight: $font-weight-bold;
+        color: $color-dark-text;
+      }
+
+      .badge-sub {
+        font-size: $font-size-xs;
+        color: $color-primary;
+      }
+    }
+  }
+}

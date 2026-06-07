@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EasyPaisa - Digital Finance for Everyday Life in Pakistan</title>
+  <meta name="description"
+    content="EasyPaisa is Pakistan's leading digital financial services platform. Send money, pay bills, buy load, and manage your finances securely.">
+  <meta name="keywords" content="easypaisa, digital finance, mobile banking, payments, money transfer, Pakistan">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EasyPaisa - Digital Finance for Everyday Life">
+  <meta property="og:description"
+    content="Pakistan's leading digital financial services platform. Send money, pay bills, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EasyPaisa - Digital Finance for Everyday Life">
+  <meta name="twitter:description" content="Pakistan's leading digital financial services platform.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2300A651'/%3E%3Cpath fill='%23FFF' d='M16 6c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm3 14.5l-1.5-1.5 2-2H11v-2h8.5l-2-2 1.5-1.5L23 16l-4 4.5z'/%3E%3C/svg%3E">
+
+  <!-- Schema markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "EasyPaisa",
+    "url": "https://www.easypaisa.com.pk",
+    "description": "Digital financial services platform in Pakistan",
+    "foundingDate": "2009",
+    "areaServed": "PK"
+  }
+  </script>
+
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- Swiper -->
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Main CSS -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Custom Style CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="header" role="banner">
+    <div class="container-content">
+      <div class="header-inner">
+        <div class="logo-wrapper">
+          <a href="#" class="header-logo" aria-label="EasyPaisa Home">
+            <img src="assets/images/logo-easy-light.svg" alt="EasyPaisa">
+          </a>
+
+          <div class="app-mode-wrapper">
+            <ul>
+              <li class="active">
+                <a href="javascript:void(0);">Personal</a>
+
+                <ul>
+                  <li><a class="dropdown-item" href="javascript:void(0);">My Account</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Zakat Declaration</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Wealth Management</a>
+                  </li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Debit Cards</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Payments</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Insurance</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Mini Apps</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Loans</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);"> Card Discounts </a></li>
+                </ul>
+
+              </li>
+
+
+              <li>
+                <a href="javascript:void(0);">Business</a>
+                <ul>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Business Homepage</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Business Solutions</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Merchant</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Retailer</a></li>
+                  <li><a class="dropdown-item" href="javascript:void(0);">Microfinance Loan Services</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-extend">
+          <nav class="header-nav" aria-label="Main Navigation">
+            <ul class="nav-menu">
+              <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Help &amp; Support</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Find Us</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <button class="search-btn" aria-label="Search">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+              </svg>
+            </button>
+            <button class="btn-login">Urdu</button>
+            <button class="btn-signup">
+              <i class="bi bi-person-fill"></i>
+
+              Sign Up
+            </button>
+            <button class="hamburger-btn" aria-label="Open menu">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       OFFCANVAS NAV
+  ============================================================ -->
+  <div class="offcanvas-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="offcanvas-header">
+      <span class="offcanvas-logo">
+        <img src="https://placehold.co/120x32/00A651/FFFFFF?text=EasyPaisa" alt="EasyPaisa" width="120" height="32">
+      </span>
+      <button class="offcanvas-close" aria-label="Close menu">
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+        </svg>
+      </button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="offcanvas-menu">
+        <li><a href="#" class="offcanvas-link">Personal</a></li>
+        <li><a href="#" class="offcanvas-link">Business</a></li>
+        <li><a href="#" class="offcanvas-link">About Us</a></li>
+        <li><a href="#" class="offcanvas-link">Help &amp; Support</a></li>
+        <li><a href="#" class="offcanvas-link active">Find Us</a></li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <button class="offcanvas-btn offcanvas-btn--login">Login</button>
+      <button class="offcanvas-btn offcanvas-btn--signup">Sign Up</button>
+    </div>
+  </div>
+  <div class="offcanvas-overlay"></div>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="Hero banner">
+    <div class="hero-bg-shape"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5">
+          <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+            <nav class="hero-breadcrumb d-none" aria-label="Breadcrumb">
+              <a href="#">Home</a>
+              <svg width="14" height="14" viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+              </svg>
+              <span>Personal</span>
+            </nav>
+
+            <h1 class="hero-title">
+              Digital finance<br>
+              for everyday life<br>
+              in <span class="highlight">Pakistan.</span>
+            </h1>
+
+            <p class="hero-desc">
+              Experience the all-new way to manage your money. Send payments, pay bills, and grow your savings — all
+              from one app.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#" class="btn btn--primary">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M17.75 17.25L16 19V8a1 1 0 00-2 0v11l-1.75-1.75a1 1 0 00-1.5 1.5l3.5 3.5a1 1 0 001.5 0l3.5-3.5a1 1 0 00-1.5-1.5zM8 4a1 1 0 011 1v11l1.75-1.75a1 1 0 111.5 1.5l-3.5 3.5a1 1 0 01-1.5 0l-3.5-3.5a1 1 0 111.5-1.5L7 16V5a1 1 0 011-1z"
+                    fill="currentColor" />
+                </svg>
+                Download App
+              </a>
+              <a href="#" class="btn btn--secondary">Explore Personal Services</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 d-none">
+          <div class="hero-visual" data-aos="fade-left" data-aos-duration="1000">
+            <div class="hero-bg-circle"></div>
+
+
+
+            <!-- Floating Cards -->
+            <div class="floating-card floating-card--1">
+              <div class="floating-badge">
+                <div class="badge-icon" style="background:rgba(0,166,81,0.1);color:var(--color-primary);">
+                  <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="badge-info">
+                  <div class="badge-label">Wallet Balance</div>
+                  <div class="badge-value">PKR 25,400</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card--2">
+              <div class="floating-badge">
+                <div class="badge-icon" style="background:rgba(33,150,243,0.1);color:#2196F3;">
+                  <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path
+                      d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="badge-info">
+                  <div class="badge-label">Active Users</div>
+                  <div class="badge-value">100M+</div>
+                  <div class="badge-sub">&bull; Pakistan's #1</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card--3">
+              <div class="floating-badge">
+                <div class="badge-icon" style="background:rgba(255,152,0,0.1);color:#FF9800;">
+                  <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="badge-info">
+                  <div class="badge-label">App Rating</div>
+                  <div class="badge-value">4.6 ★</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card floating-card--4">
+              <div class="floating-badge">
+                <div class="badge-icon" style="background:rgba(76,175,80,0.1);color:#4CAF50;">
+                  <svg width="20" height="20" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="badge-info">
+                  <div class="badge-label">Transaction</div>
+                  <div class="badge-value">Success</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-main-image">
+      <img src="assets/images/hero.jpg" alt="EasyPaisa app user" loading="eager">
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EVERYDAY SERVICES
+  ============================================================ -->
+  <section class="services section-padding" aria-labelledby="services-title">
+    <div class="container">
+      <div class="services-header" data-aos="fade-up">
+        <span class="section-label">Services</span>
+        <h2 class="section-title" id="services-title">Everyday Services for you</h2>
+        <p class="section-subtitle">Manage your daily finances with ease. From payments to transfers, we've got you
+          covered.</p>
+      </div>
+
+      <!-- Desktop Grid -->
+      <div class="services-grid" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://picsum.photos/seed/transfer/300/200" alt="Money Transfer" loading="lazy" width="300"
+              height="200">
+          </div>
+          <h3 class="service-title">Money Transfer</h3>
+          <p class="service-desc">Send money instantly to any bank or mobile account across Pakistan.</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="body-small" style="color:var(--color-primary);font-weight:600;">Send Now</span>
+            <span class="service-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://picsum.photos/seed/bills/300/200" alt="Bill Payments" loading="lazy" width="300"
+              height="200">
+          </div>
+          <h3 class="service-title">Bill Payments</h3>
+          <p class="service-desc">Pay utility bills, school fees, and government payments seamlessly.</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="body-small" style="color:var(--color-primary);font-weight:600;">Pay Now</span>
+            <span class="service-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://picsum.photos/seed/load/300/200" alt="Mobile Load & Packages" loading="lazy" width="300"
+              height="200">
+          </div>
+          <h3 class="service-title">Mobile Load &amp; Packages</h3>
+          <p class="service-desc">Top up any mobile number or subscribe to data packages instantly.</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="body-small" style="color:var(--color-primary);font-weight:600;">Buy Now</span>
+            <span class="service-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://picsum.photos/seed/scanner/300/200" alt="Scan & Pay" loading="lazy" width="300"
+              height="200">
+          </div>
+          <h3 class="service-title">Scan &amp; Pay</h3>
+          <p class="service-desc">Quickly pay at any EasyPaisa QR-enabled merchant across Pakistan.</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="body-small" style="color:var(--color-primary);font-weight:600;">Scan Now</span>
+            <span class="service-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-img-wrap">
+            <img src="https://picsum.photos/seed/debitcard/300/200" alt="Debit Card" loading="lazy" width="300"
+              height="200">
+          </div>
+          <h3 class="service-title">Debit Card</h3>
+          <p class="service-desc">Order your EasyPaisa debit card and shop online or in-store worldwide.</p>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="body-small" style="color:var(--color-primary);font-weight:600;">Get Card</span>
+            <span class="service-arrow">
+              <svg viewBox="0 0 24 24">
+                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+              </svg>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Slider -->
+      <div class="services-slider-mobile swiper" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-img-wrap">
+                <img src="https://picsum.photos/seed/transfer/300/200" alt="Money Transfer" loading="lazy" width="300"
+                  height="200">
+              </div>
+              <h3 class="service-title">Money Transfer</h3>
+              <p class="service-desc">Send money instantly to any bank or mobile account across Pakistan.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="body-small" style="color:var(--color-primary);font-weight:600;">Send Now</span>
+                <span class="service-arrow">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-img-wrap">
+                <img src="https://picsum.photos/seed/bills/300/200" alt="Bill Payments" loading="lazy" width="300"
+                  height="200">
+              </div>
+              <h3 class="service-title">Bill Payments</h3>
+              <p class="service-desc">Pay utility bills, school fees, and government payments seamlessly.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="body-small" style="color:var(--color-primary);font-weight:600;">Pay Now</span>
+                <span class="service-arrow">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-img-wrap">
+                <img src="https://picsum.photos/seed/load/300/200" alt="Mobile Load & Packages" loading="lazy"
+                  width="300" height="200">
+              </div>
+              <h3 class="service-title">Mobile Load &amp; Packages</h3>
+              <p class="service-desc">Top up any mobile number or subscribe to data packages instantly.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="body-small" style="color:var(--color-primary);font-weight:600;">Buy Now</span>
+                <span class="service-arrow">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-img-wrap">
+                <img src="https://picsum.photos/seed/scanner/300/200" alt="Scan & Pay" loading="lazy" width="300"
+                  height="200">
+              </div>
+              <h3 class="service-title">Scan &amp; Pay</h3>
+              <p class="service-desc">Quickly pay at any EasyPaisa QR-enabled merchant across Pakistan.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="body-small" style="color:var(--color-primary);font-weight:600;">Scan Now</span>
+                <span class="service-arrow">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="service-card">
+              <div class="service-img-wrap">
+                <img src="https://picsum.photos/seed/debitcard/300/200" alt="Debit Card" loading="lazy" width="300"
+                  height="200">
+              </div>
+              <h3 class="service-title">Debit Card</h3>
+              <p class="service-desc">Order your EasyPaisa debit card and shop online or in-store worldwide.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <span class="body-small" style="color:var(--color-primary);font-weight:600;">Get Card</span>
+                <span class="service-arrow">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATISTICS
+  ============================================================ -->
+  <section class="stats section-padding" aria-labelledby="stats-title">
+    <div class="container">
+      <h2 id="stats-title" class="sr-only">Statistics</h2>
+      <div class="stats-main-card" data-aos="fade-up">
+        <div class="stats-left">
+          <div class="stats-number" data-target="100" data-suffix="M+">0</div>
+          <p class="stats-text">Pakistan's most trusted digital finance platform serving millions of customers
+            nationwide.</p>
+        </div>
+        <div class="stats-right">
+          <img src="https://picsum.photos/seed/statsman/500/320" alt="Mobile banking user" loading="lazy" width="500"
+            height="320">
+        </div>
+      </div>
+
+      <div class="stats-bottom" data-aos="fade-up" data-aos-delay="100">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-item-number" data-target="100" data-suffix="M+">0</div>
+            <div class="stat-item-label">Downloads</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number" data-prefix="#" data-target="1">0</div>
+            <div class="stat-item-label">Finance App</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number" data-target="46" data-prefix="" data-suffix="">4.6</div>
+            <div class="stat-item-label">Rating</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number" data-target="1500" data-suffix="+">0</div>
+            <div class="stat-item-label">Services</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item-number">Secure</div>
+            <div class="stat-item-label">Platform</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECURITY
+  ============================================================ -->
+  <section class="security section-padding" aria-labelledby="security-title">
+    <div class="container">
+      <div class="security-content">
+        <div class="security-grid">
+          <div class="security-visual" data-aos="fade-right">
+            <div class="shield-icon">
+              <svg viewBox="0 0 200 200" fill="none">
+                <path d="M100 20L40 55V100C40 145 65 185 100 195C135 185 160 145 160 100V55L100 20Z"
+                  fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.2)" stroke-width="3" />
+                <path d="M100 35L55 60V98C55 133 73 163 100 172C127 163 145 133 145 98V60L100 35Z"
+                  fill="rgba(255,255,255,0.05)" />
+                <rect x="88" y="85" width="24" height="30" rx="4" fill="white" />
+                <circle cx="100" cy="105" r="6" fill="#00A651" />
+                <path d="M95 100L100 105L108 95" stroke="white" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="security-info" data-aos="fade-left">
+            <h2 id="security-title">Your Security,<br>Our Priority.</h2>
+
+            <div class="security-slider-wrap">
+              <div class="security-slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="security-slide">
+                      <h3>Cooling-Off Period</h3>
+                      <p>Enjoy peace of mind with our cooling-off period. Cancel transactions within the specified time
+                        at no cost.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="security-slide">
+                      <h3>End-to-End Encryption</h3>
+                      <p>All your transactions and data are protected with 256-bit encryption technology for maximum
+                        security.</p>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="security-slide">
+                      <h3>Fraud Protection</h3>
+                      <p>Our advanced monitoring system detects and prevents unauthorized transactions in real-time.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="security-pagination"></div>
+
+            <a href="#" class="btn btn--white">Learn More About Security</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SAVE & EARN
+  ============================================================ -->
+  <section class="section-padding" aria-labelledby="save-title">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="section-label">Save &amp; Earn</span>
+        <h2 class="section-title" id="save-title">Grow your money with EasyPaisa</h2>
+        <p class="section-subtitle" style="margin:0 auto 3rem;">Explore saving options designed to help your money work
+          harder for you.</p>
+      </div>
+
+      <div class="position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="save-earn-slider swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-product">
+                <div class="product-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24">
+                    <path
+                      d="M21.18 5.01L18.1 2.95c-.2-.13-.47-.07-.6.13-.13.2-.07.47.13.6l3.08 2.06c.2.13.47.07.6-.13.13-.2.07-.48-.13-.6z"
+                      fill="currentColor" />
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.02-2.23-.41-3.87-1.41-3.87-3.4 0-1.46.99-2.53 2.6-2.93V4h2.67v1.95c1.54.36 2.57 1.37 2.74 3.1h-1.96c-.11-.96-.68-1.64-2.17-1.64-1.8 0-2.27.87-2.27 1.48 0 .81.48 1.48 2.53 1.91 2.56.53 3.97 1.52 3.97 3.49 0 1.49-.94 2.63-2.81 3.01zM21.18 5.01L18.1 2.95c-.2-.13-.47-.07-.6.13-.13.2-.07.47.13.6l3.08 2.06c.2.13.47.07.6-.13.13-.2.07-.48-.13-.6z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="product-title">Savings Pocket</h3>
+                <p class="product-desc">Set aside money for your goals with flexible savings pockets.</p>
+                <a href="#" class="product-cta">Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card-product">
+                <div class="product-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24">
+                    <path
+                      d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="product-title">Term Deposit</h3>
+                <p class="product-desc">Lock in competitive returns with flexible term deposit options.</p>
+                <a href="#" class="product-cta">Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card-product">
+                <div class="product-icon">
+                  <svg width="28" height="28" viewBox="0 0 24 24">
+                    <path
+                      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                      fill="currentColor" />
+                  </svg>
+                </div>
+                <h3 class="product-title">Daily Rewards</h3>
+                <p class="product-desc">Earn daily returns on your savings with no lock-in period.</p>
+                <a href="#" class="product-cta">Learn More
+                  <svg width="14" height="14" viewBox="0 0 24 24">
+                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Get Your Card
+
+  ============================================================ -->
+    <section class="wallet-section section-padding" id="wallet-id">
+      <div class="container">
+        <div class="wallet-banner-wrap row align-items-center" data-aos="fade-up">
+          <div class="col-md-4">
+            <h2 class="wallet-banner-title"><span>One Wallet.</span> <br><span>Three Powerful</span> <br><span>Cards.</span>
+            </h2>
+            <p class="wallet-banner-desc">Everyday payments. Limitless possibilities. Choose your card. Live your way.</p>
+            <div class="wallet-btn-wrap">
+              <a href="#" class="btn btn--primary btn--sm">Get Your Card</a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            
+            <div class="phone-mockup">
+              <img src="assets/images/get-ur-card.png" alt="Phone with EasyPaisa card">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+       CARDS 
+  ============================================================ -->
+  <section class="cards-promo section-padding" aria-labelledby="cards-title">
+    <div class="container">
+
+      <!-- Mini Apps & Scan & Pay -->
+      <div class="mini-apps-grid">
+        <div class="mini-card" data-aos="fade-up">
+          <span class="mini-label">All IN ONE</span>
+          <h3 class="mini-title">Mini Apps</h3>
+          <p class="mini-desc">Discover useful services and everyday essentials, all in one place.</p>
+          <a href="#" class="btn btn--primary btn--sm">Explore Mini Apps</a>
+          <div class="mini-image">
+            <img src="assets/images/mini-apps.png" alt="Mini Apps on phone" loading="lazy" >
+          </div>
+        </div>
+
+        <div class="mini-card" data-aos="fade-up" data-aos-delay="100">
+          <span class="mini-label">FAST &amp; SECURE</span>
+          <h3 class="mini-title">Scan &amp; Pay</h3>
+          <p class="mini-desc">Scan any QR code and pay instantly. Safe, secure and convenient.</p>
+          <a href="#" class="btn btn--primary btn--sm">Explore Scan & Pay</a>
+          <div class="mini-image">
+            <img src="assets/images/scan-and-pay.png" alt="Scan & Pay demo" loading="lazy" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINANCIAL SUPPORT
+  ============================================================ -->
+  <section class="support_sec_main" aria-label="Financial Support Available">
+    <div class="container">
+      
+      <!-- The Banner -->
+      <div class="support_banner_wrap">
+        <div class="support_banner_left">
+          <h2>
+            Financial<br>
+            Support
+          </h2>
+        </div>
+        <div class="support_banner_img_wrap">
+          <img src="assets/images/financial_support_rightalign.png" alt="Financial Support User">
+        </div>
+      </div>
+
+      <!-- The Overlay Cards -->
+      <div class="support_cards_wrap">
+        
+        <!-- Card 1: Easy Cash -->
+                     <a href="#" class="support_card support_card_one">
+          <div class="support_card_icon_wrap">
+            <img src="assets/images/financial_support_icon_1.png" alt="Easy Cash Icon">
+          </div>
+          <div class="support_card_info">
+            <h3>Easy Cash</h3>
+            <p>Instant loan in easy steps</p>
+            <span class="support_card_btn">Explore &gt;</span>
+          </div>
+        </a>
+         
+   
+
+        <!-- Card 2: Sarmaya Qarza -->
+        <a href="#" class="support_card support_card_two">
+          <div class="support_card_icon_wrap">
+            <img src="assets/images/financial_support_icon_2.png" alt="Sarmaya Qarza Icon">
+          </div>
+          <div class="support_card_info">
+            <h3>Sarmaya Qarza</h3>
+            <p>Instant loan in easy steps</p>
+            <span class="support_card_btn">Explore &gt;</span>
+          </div>
+        </a>
+
+        <!-- Card 3: Buy now, pay later -->
+
+         <a href="#" class="support_card support_card_three">
+          <div class="support_card_icon_wrap">
+            <img src="assets/images/financial_support_icon_3.png" alt="Buy now pay later Icon">
+          </div>
+          <div class="support_card_info">
+            <h3>Buy now, pay later</h3>
+            <p>Instant loan in easy steps</p>
+            <span class="support_card_btn">Explore &gt;</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INSURANCE
+  ============================================================ -->
+<section class="protect_sec_main">
+    <div class="protect_sec_bg"></div>
+
+    <div class="container">
+        <div class="protect_sec_wrap">
+
+            <div class="protect_sec_content">
+                <span class="protect_sec_tag">Insurance</span>
+
+                <h2>
+                    Life is better <br>
+                    when you're <br>
+                    protected
+                </h2>
+
+                <p>
+                    From health to home, car to travel everything you love,
+                    covered with ease and trust
+                </p>
+
+                <a href="#" class="protect_sec_btn">
+                    Explore Insurance
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+  <!-- ============================================================
+       APP DOWNLOAD BANNER 
+  ============================================================ -->
+  <section class="footer-app-banner" aria-label="Download EasyPaisa App">
+    <!-- Left side: Phone mockup -->
+    <div class="banner-phone-wrap">
+      <img src="assets/images/footer-mobile-cut.png" alt="EasyPaisa Mobile App" class="banner-phone-img">
+    </div>
+    <div class="container banner-inner-container">
+
+      <!-- Center: Content -->
+      <div class="banner-content-wrap">
+        <div class="banner-qr-box">
+          <img src="assets/images/footer-qrcode-mob.png" alt="QR Code to Download App" class="banner-qr-img">
+        </div>
+        <div class="banner-text-downloads">
+          <h2 class="banner-title">
+            Download easypaisa app and experience the all-new way to manage your money.
+          </h2>
+          <div class="banner-store-badges">
+            <a href="#" class="banner-store-link" aria-label="Download on App Store">
+              <img src="assets/images/footer_apple-store.svg" alt="App Store Badge">
+            </a>
+            <a href="#" class="banner-store-link" aria-label="Get it on Google Play">
+              <img src="assets/images/footer_g-play.svg" alt="Google Play Badge">
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- Right side: Woman holding phone -->
+    <div class="banner-person-wrap">
+      <img src="assets/images/footer_person_rightalign.png" alt="Easypaisa User" class="banner-person-img">
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER 
+  ============================================================ -->
+  <footer class="footer-bottom-sec" role="contentinfo">
+    <div class="container footer-inner-container">
+      <!-- Left column: Logo & Socials -->
+      <div class="footer-brand-col">
+        <div class="footer-logo-wrap">
+          <img src="assets/images/footer_logo.png" alt="EasyPaisa Digital Bank" class="footer-logo-img">
+        </div>
+        <div class="footer-social-links">
+          <a href="#" class="social-icon" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="X">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="social-icon" aria-label="LinkedIn">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right column: Two rows of links -->
+      <div class="footer-links-col">
+        <div class="footer-links-row">
+          <a href="#">Contact us</a>
+          <span class="link-separator">|</span>
+          <a href="#">FAQs</a>
+          <span class="link-separator">|</span>
+          <a href="#">Schedule of charges</a>
+          <span class="link-separator">|</span>
+          <a href="#">Legal</a>
+          <span class="link-separator">|</span>
+          <a href="#">Downloads</a>
+        </div>
+        <div class="footer-links-row">
+          <a href="#">About us</a>
+          <span class="link-separator">|</span>
+          <a href="#">Awards</a>
+          <span class="link-separator">|</span>
+          <a href="#">Terms & Conditions</a>
+          <span class="link-separator">|</span>
+          <a href="#">Privacy policy</a>
+          <span class="link-separator">|</span>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

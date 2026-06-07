@@ -1,0 +1,830 @@
+/* ============================================================
+       Get Your Card
+============================================================ */
+.wallet-banner-title{
+  font-size: 52px;
+    line-height: 1;
+    font-weight: 700;
+    color: #2e2b44;
+    margin: 0 0 18px;
+}
+.wallet-banner-desc{
+    font-size: 22px;
+line-height: 1.5;
+color: #7d7d7d;
+margin-bottom: 16px;
+}
+/* =========================
+   Mini Apps / Scan & Pay
+========================= */
+
+.cards-promo {
+    padding: 80px 0;
+}
+
+.mini-apps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.mini-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    background: #eaf7f4;
+    min-height: 520px;
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(0, 180, 108, 0.12);
+    color: #00b46c;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.mini-title {
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+    color: #2e2b44;
+    margin: 0 0 18px;
+}
+.cards-promo .mini-card .mini-title {
+    font-size: 3.4rem;
+}
+.mini-desc {
+    max-width: 290px !important;
+    font-size: 24px!important;
+    line-height: 1.5 !important;
+    color: #322d3c !important;
+    margin-bottom: 24px !important;
+}
+
+/* green line */
+.mini-desc::after {
+    content: "";
+    display: block;
+    width: 62px;
+    height: 4px;
+    background: #00b46c;
+    border-radius: 10px;
+    margin-top: 24px;
+}
+
+.mini-card .btn {
+    margin-top: auto;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+}
+
+.btn--primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: #00b46c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn--primary:hover {
+    background: #00995b;
+    color: #fff;
+}
+
+.btn--sm {
+    font-size: 16px;
+}
+
+/* image wrapper */
+.mini-image {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* IMPORTANT:
+   No width / height given */
+.mini-image img {
+    display: block;
+    max-width: 100%;
+   
+}
+.cards-promo .mini-card .mini-image img{
+    max-height: 400px;
+}
+
+.cards-promo .mini-card {
+    border-radius: 8px;
+    background: #e1f1ef;
+    padding: 3rem;
+}
+
+
+/* =========================
+   Laptop
+========================= */
+@media (max-width: 1399px) {
+    .cards-promo .mini-card .mini-image img {
+    max-height: 333px;
+}
+
+
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1199px) {
+
+    .mini-title {
+        font-size: 52px;
+    }
+
+    .mini-card {
+        min-height: 460px;
+        padding: 40px 32px;
+    }
+
+    .mini-desc {
+        font-size: 18px;
+    }
+    
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 991px) {
+
+    .mini-apps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini-card {
+        min-height: auto;
+        padding: 40px 24px;
+    }
+
+    .mini-title {
+        font-size: 42px;
+    }
+
+    .mini-desc {
+        max-width: 100%;
+        font-size: 17px;
+    }
+
+    .mini-image {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .mini-image img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .mini-title {
+        font-size: 36px;
+    }
+
+    .mini-label {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .btn--primary {
+        width: 100%;
+    }
+}
+/* ============================================================
+   CUSTOM Financial Support
+============================================================ */
+
+.support_sec_main {
+    position: relative;
+    padding: 20rem 0;
+    background: #ffffff;
+     
+}
+
+.support_banner_wrap {
+    position: relative;
+    background-color: #2c2735;
+    border-radius: 30px;
+    /* min-height: 450px; */
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    overflow: visible;
+}
+
+.support_banner_left {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding-left: 120px
+}
+
+.support_banner_left h2 {
+    color: #ffffff;
+    font-size: 62px;
+    line-height: 1.1;
+    font-weight: 700;
+    margin: 0;
+}
+
+.support_banner_img_wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 116%;
+    /* overlaps the top edge */
+    width: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.support_banner_img_wrap img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* Cards Overlay */
+.support_cards_wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: -80px;
+    /* overlaps the banner bottom */
+    position: relative;
+    z-index: 4;
+}
+
+.support_card {
+    display: flex;
+    align-items: center;
+    background-color: #e1f1ef;
+    border-radius: 8px;
+    padding: 31px 31px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: absolute;
+    justify-content: flex-end;
+    
+}
+
+.support_card_one{
+    left: 100px;
+    width: 300px;
+    height: 220px;
+}
+
+.support_card_two{
+    left: 530px;
+  width: 300px;
+    height: 220px;
+}
+
+.support_card_three{
+    right: 35px;
+   width: 300px;
+    height: 220px;
+}
+
+.support_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 166, 81, 0.15);
+}
+
+.support_card_icon_wrap {
+    width: 300px;
+    height: 200px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    position: absolute;
+    left: -150px;
+}
+
+
+
+.support_card_icon_wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.support_card_info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    width: 158px;
+}
+
+.support_card_info h3 {
+    color: #2f2c3d;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.support_card_info p {
+    color: #7a7a7a;
+    font-size: 23px;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.support_card_btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    background-color: #16a34a;
+    color: #ffffff !important;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    margin-top: 4px;
+}
+
+.support_card:hover .support_card_btn {
+    background-color: #15803d;
+}
+
+
+
+/* ============================================================
+   CUSTOM INSURANCE
+============================================================ */
+
+.protect_sec_main {
+    position: relative;
+    overflow: hidden;
+    /* background: #f8f8f8; */
+    padding: 100px 0;
+}
+
+.protect_sec_wrap {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.protect_sec_content {
+    max-width: 420px;
+    position: relative;
+    z-index: 2;
+}
+
+.protect_sec_tag {
+    display: inline-block;
+    padding: 8px 18px;
+    background: #dff5e8;
+    color: #16a34a;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.protect_sec_content h2 {
+    font-size: 62px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: #2f2c3d;
+    margin-bottom: 25px;
+}
+
+.protect_sec_content p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #7a7a7a;
+    margin-bottom: 30px;
+}
+
+.protect_sec_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 30px;
+    background: #16a34a;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.protect_sec_btn:hover {
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.protect_sec_bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 72%;
+    height: 100%;
+    background-image: url('../images/insurance_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+
+    .protect_sec_wrap {
+        min-height: 550px;
+    }
+
+    .protect_sec_content h2 {
+        font-size: 48px;
+    }
+
+    .protect_sec_content p {
+        font-size: 18px;
+    }
+
+    .protect_sec_bg {
+        width: 65%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+    .protect_sec_wrap {
+        min-height: auto;
+        padding: 80px 0 350px;
+    }
+
+    .protect_sec_content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .protect_sec_content h2 {
+        font-size: 38px;
+    }
+
+    .protect_sec_content p {
+        font-size: 16px;
+    }
+
+    .protect_sec_bg {
+        width: 100%;
+        height: 320px;
+        bottom: 0;
+        top: auto;
+        background-position: center bottom;
+        background-size: contain;
+    }
+}
+
+/* ============================================================
+   CUSTOM FOOTER & DOWNLOAD BANNER STYLING
+============================================================ */
+
+/* Download Banner Section */
+.footer-app-banner {
+    position: relative;
+    background-color: #005c46;
+    height: 300px;
+    overflow: visible;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-inner-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Phone Mockup (Left) */
+.banner-phone-wrap {
+    position: absolute;
+    left: 243px;
+    bottom: 15px;
+    width: 250px;
+    z-index: 5;
+}
+
+.banner-phone-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transform: translateY(15px);
+}
+
+/* Center Content Area */
+/* .banner-content-wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 270px;
+  margin-right: 380px;
+  z-index: 4;
+} */
+.banner-content-wrap {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    /* margin-left: 270px; */
+    /* margin-right: 380px; */
+    z-index: 4;
+    margin: auto;
+}
+
+.banner-qr-box {
+    /* background: #ffffff;
+  border: 4px solid #00df89; */
+    border-radius: 20px;
+    padding: 10px;
+    width: 190px;
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.banner-qr-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.banner-text-downloads {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.banner-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 500px;
+    font-family: inherit;
+}
+
+.banner-store-badges {
+    display: flex;
+    gap: 12px;
+}
+
+.banner-store-link img {
+    height: 45px;
+    width: auto;
+    display: block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.banner-store-link:hover img {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+/* Person Image (Right) */
+.banner-person-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: auto;
+    z-index: 1;
+}
+
+.banner-person-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Dark Footer Section */
+.footer-bottom-sec {
+    background-color: #2b2734;
+    padding: 40px 0;
+    color: #ffffff;
+}
+
+.footer-inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Brand Logo & Social Links (Left) */
+.footer-brand-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-logo-wrap {
+    display: block;
+}
+
+.footer-logo-img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.footer-social-links .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #ffffff;
+    color: #2b2734;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social-links .social-icon:hover {
+    background-color: #07ab57;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Navigation Links (Right) */
+.footer-links-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+}
+
+.footer-links-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-links-row a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    opacity: 0.9;
+}
+
+.footer-links-row a:hover {
+    color: #07ab57;
+    opacity: 1;
+}
+
+.link-separator {
+    color: #ffffff;
+    opacity: 0.4;
+    font-size: 14px;
+    user-select: none;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+============================================================ */
+
+/* Large Tablets (Hide person, reduce right gap) */
+@media (max-width: 1199.98px) {
+    .banner-person-wrap {
+        display: none;
+    }
+
+    .banner-content-wrap {
+        margin-right: 20px;
+    }
+}
+
+/* Tablets (Hide phone, shift content to left) */
+@media (max-width: 991.98px) {
+    .banner-phone-wrap {
+        display: none;
+    }
+
+    .banner-content-wrap {
+        margin-left: 20px;
+    }
+}
+
+/* Mobile Devices (Stack all blocks, center alignment) */
+@media (max-width: 767.98px) {
+    .footer-app-banner {
+        height: auto;
+        padding: 40px 0;
+        margin-top: 40px;
+    }
+
+    .banner-inner-container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .banner-content-wrap {
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .banner-text-downloads {
+        align-items: center;
+    }
+
+    .banner-title {
+        font-size: 20px;
+        max-width: 100%;
+    }
+
+    .banner-store-badges {
+        justify-content: center;
+    }
+
+    /* Footer responsiveness */
+    .footer-inner-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-brand-col {
+        align-items: center;
+    }
+
+    .footer-links-col {
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-links-row {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-links-row a {
+        font-size: 13px;
+    }
+
+    .link-separator {
+        font-size: 12px;
+    }
+}

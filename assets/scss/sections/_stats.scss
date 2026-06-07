@@ -1,0 +1,137 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.stats {
+  .stats-main-card {
+    background: $color-light-mint;
+    border-radius: $radius-container;
+    padding: $spacer-3xl;
+    display: flex;
+    align-items: center;
+    gap: $spacer-3xl;
+    overflow: hidden;
+    position: relative;
+
+    @include respond-down('lg') {
+      padding: $spacer-2xl;
+      gap: $spacer-xl;
+    }
+
+    @include respond-down('md') {
+      flex-direction: column;
+      text-align: center;
+      padding: $spacer-xl;
+    }
+  }
+
+  .stats-left {
+    flex: 0 0 40%;
+    max-width: 40%;
+
+    @include respond-down('md') {
+      flex: none;
+      max-width: 100%;
+    }
+  }
+
+  .stats-number {
+    font-size: $font-size-7xl;
+    font-weight: $font-weight-extrabold;
+    color: $color-dark-text;
+    line-height: 1;
+    margin-bottom: $spacer-md;
+    letter-spacing: -2px;
+
+    @include respond-down('lg') {
+      font-size: $font-size-5xl;
+    }
+
+    @include respond-down('md') {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  .stats-text {
+    font-size: $font-size-md;
+    color: $color-muted-text;
+    max-width: 400px;
+
+    @include respond-down('md') {
+      margin: 0 auto;
+    }
+  }
+
+  .stats-right {
+    flex: 1;
+    position: relative;
+    @include flex-center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: $radius-section;
+      max-height: 320px;
+      object-fit: cover;
+
+      @include respond-down('md') {
+        max-height: 240px;
+      }
+    }
+  }
+
+  .stats-bottom {
+    margin-top: $spacer-xl;
+    background: $color-light-grey;
+    border-radius: $radius-card;
+    padding: $spacer-xl;
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: $spacer-md;
+
+      @include respond-down('md') {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $spacer-lg;
+      }
+
+      @include respond-down('mobile') {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .stat-item {
+    text-align: center;
+    padding: $spacer-md;
+    position: relative;
+
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 40px;
+      background: rgba($color-dark-text, 0.1);
+
+      @include respond-down('md') {
+        display: none;
+      }
+    }
+
+    .stat-item-number {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-bold;
+      color: $color-primary;
+      margin-bottom: $spacer-xs;
+    }
+
+    .stat-item-label {
+      font-size: $font-size-xs;
+      color: $color-muted-text;
+      font-weight: $font-weight-medium;
+    }
+  }
+}

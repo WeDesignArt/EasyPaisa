@@ -1,0 +1,119 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.offcanvas-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 100vh;
+  background: $color-white;
+  z-index: $z-offcanvas;
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -8px 0 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+
+  &.open {
+    right: 0;
+  }
+
+  .offcanvas-header {
+    @include flex-between;
+    padding: $spacer-lg;
+    border-bottom: 1px solid $color-border;
+  }
+
+  .offcanvas-logo {
+    img {
+      height: 32px;
+    }
+  }
+
+  .offcanvas-close {
+    @include flex-center;
+    width: 36px;
+    height: 36px;
+    border-radius: $radius-full;
+    background: $color-light-grey;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+
+  .offcanvas-body {
+    flex: 1;
+    padding: $spacer-lg;
+    overflow-y: auto;
+  }
+
+  .offcanvas-menu {
+    display: flex;
+    flex-direction: column;
+    gap: $spacer-xs;
+  }
+
+  .offcanvas-link {
+    display: block;
+    padding: $spacer-md $spacer-lg;
+    font-size: $font-size-base;
+    font-weight: $font-weight-medium;
+    color: $color-dark-text;
+    border-radius: $radius-card;
+
+    &:hover,
+    &.active {
+      background: rgba($color-primary, 0.06);
+      color: $color-primary;
+    }
+  }
+
+  .offcanvas-footer {
+    padding: $spacer-lg;
+    border-top: 1px solid $color-border;
+    display: flex;
+    flex-direction: column;
+    gap: $spacer-sm;
+  }
+
+  .offcanvas-btn {
+    width: 100%;
+    padding: $spacer-md;
+    text-align: center;
+    border-radius: $radius-pill;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+
+    &--login {
+      background: $color-light-grey;
+      color: $color-dark-text;
+    }
+
+    &--signup {
+      background: $color-primary;
+      color: $color-white;
+    }
+  }
+}
+
+.offcanvas-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: $z-offcanvas - 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

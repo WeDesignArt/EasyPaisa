@@ -1,0 +1,319 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.insurance {
+  background: $color-white;
+
+  .insurance-grid {
+    display: flex;
+    align-items: center;
+    gap: $spacer-3xl;
+
+    @include respond-down('lg') {
+      gap: $spacer-xl;
+    }
+
+    @include respond-down('md') {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .insurance-info {
+    flex: 0 0 45%;
+
+    @include respond-down('md') {
+      flex: none;
+    }
+  }
+
+  .insurance-visual {
+    flex: 1;
+    position: relative;
+    @include flex-center;
+
+    .family-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: $radius-container;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: $radius-container;
+      }
+    }
+
+    .phone-overlay {
+      position: absolute;
+      right: -20px;
+      bottom: -30px;
+      animation: float 3s ease-in-out infinite;
+
+      @include respond-down('lg') {
+        right: 0;
+        bottom: -10px;
+        width: 100px;
+      }
+
+      img {
+        height: 180px;
+        width: auto;
+
+        @include respond-down('lg') {
+          height: 130px;
+        }
+      }
+    }
+  }
+}
+
+// Financial Support
+.financial-support {
+  position: relative;
+
+  .support-banner {
+    background: linear-gradient(135deg, $color-dark-green 0%, #004d3a 100%);
+    border-radius: $radius-container;
+    overflow: hidden;
+    position: relative;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+
+    @include respond-down('lg') {
+      min-height: 320px;
+    }
+
+    @include respond-down('md') {
+      min-height: auto;
+      flex-direction: column;
+    }
+  }
+
+  .support-left {
+    flex: 0 0 40%;
+    padding: $spacer-3xl;
+    position: relative;
+    z-index: 2;
+
+    @include respond-down('lg') {
+      padding: $spacer-2xl;
+    }
+
+    @include respond-down('md') {
+      flex: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      color: $color-white;
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+
+      @include respond-down('lg') {
+        font-size: $font-size-2xl;
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-top: $spacer-md;
+      max-width: 360px;
+
+      @include respond-down('md') {
+        margin: $spacer-md auto 0;
+      }
+    }
+  }
+
+  .support-right {
+    flex: 1;
+    position: relative;
+    height: 100%;
+    @include flex-center;
+    padding: $spacer-xl;
+
+    img {
+      max-height: 320px;
+      object-fit: contain;
+
+      @include respond-down('lg') {
+        max-height: 260px;
+      }
+    }
+  }
+
+  .product-cards-overlay {
+    position: relative;
+    margin-top: -60px;
+    z-index: 3;
+    padding: 0 $spacer-xl;
+
+    @include respond-down('md') {
+      margin-top: -40px;
+      padding: 0 $spacer-md;
+    }
+  }
+}
+
+// App Download
+.app-download {
+  background: $color-dark-green;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+  }
+
+  .app-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .app-grid {
+    display: flex;
+    align-items: center;
+    gap: $spacer-3xl;
+
+    @include respond-down('lg') {
+      gap: $spacer-xl;
+    }
+
+    @include respond-down('md') {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .app-mockup {
+    flex: 0 0 180px;
+
+    @include respond-down('md') {
+      flex: none;
+    }
+
+    img {
+      height: 320px;
+      width: auto;
+
+      @include respond-down('lg') {
+        height: 260px;
+      }
+    }
+  }
+
+  .app-qr {
+    flex: 0 0 120px;
+    text-align: center;
+
+    img {
+      width: 120px;
+      height: 120px;
+      background: $color-white;
+      padding: $spacer-sm;
+      border-radius: $radius-card;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: $font-size-xs;
+      margin-top: $spacer-sm;
+    }
+
+    @include respond-down('md') {
+      display: none;
+    }
+  }
+
+  .app-info {
+    flex: 1;
+
+    h2 {
+      color: $color-white;
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacer-md;
+
+      @include respond-down('lg') {
+        font-size: $font-size-xl;
+      }
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: $font-size-base;
+      margin-bottom: $spacer-xl;
+      max-width: 420px;
+
+      @include respond-down('md') {
+        margin: 0 auto $spacer-lg;
+      }
+    }
+  }
+
+  .app-buttons {
+    display: flex;
+    gap: $spacer-md;
+
+    @include respond-down('md') {
+      justify-content: center;
+    }
+
+    .store-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: $spacer-sm;
+      padding: $spacer-sm $spacer-lg;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: $radius-sm;
+      color: $color-white;
+      transition: $transition-base;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .store-text {
+        text-align: left;
+
+        .store-label {
+          font-size: $font-size-xs;
+          opacity: 0.7;
+          display: block;
+        }
+
+        .store-name {
+          font-size: $font-size-sm;
+          font-weight: $font-weight-semibold;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .app-lifestyle {
+    flex: 0 0 200px;
+
+    @include respond-down('lg') {
+      display: none;
+    }
+
+    img {
+      max-height: 300px;
+      object-fit: contain;
+      border-radius: $radius-card;
+    }
+  }
+}

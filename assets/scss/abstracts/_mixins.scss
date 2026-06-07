@@ -1,0 +1,120 @@
+@use 'variables' as *;
+
+@mixin respond-down($breakpoint) {
+  @if $breakpoint =='mobile' {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $breakpoint =='sm' {
+    $bp: $breakpoint-sm - 0.02;
+    @media (max-width: $bp) {
+      @content;
+    }
+  } @else if $breakpoint =='md' {
+    $bp: $breakpoint-md - 0.02;
+    @media (max-width: $bp) {
+      @content;
+    }
+  } @else if $breakpoint =='lg' {
+    $bp: $breakpoint-lg - 0.02;
+    @media (max-width: $bp) {
+      @content;
+    }
+  } @else if $breakpoint =='xl' {
+    $bp: $breakpoint-xl - 0.02;
+    @media (max-width: $bp) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-up($breakpoint) {
+  @if $breakpoint =='sm' {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='md' {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='lg' {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='xl' {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint =='xxl' {
+    @media (min-width: $breakpoint-xxl) {
+      @content;
+    }
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin text-gradient {
+  background: linear-gradient(135deg, $color-primary, $color-dark-green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin card-hover {
+  transition: $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-hover;
+  }
+}
+
+@mixin floating-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@mixin glass-effect {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@mixin pill-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: $spacer-xs $spacer-md;
+  border-radius: $radius-pill;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+}
