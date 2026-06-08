@@ -57,7 +57,28 @@
   // Swiper Sliders
   // ============================================================
   function initSliders() {
-    // Security Slider
+    // Security Section Slider
+    if ($('.sec-swiper').length && typeof Swiper !== 'undefined') {
+      new Swiper('.sec-swiper', {
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true,
+        },
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.sec-pagination',
+          clickable: true,
+        },
+        speed: 700,
+      });
+    }
+
+    // Security Slider (legacy)
     if ($('.security-slider').length && typeof Swiper !== 'undefined') {
       new Swiper('.security-slider', {
         slidesPerView: 1,
@@ -106,6 +127,20 @@
         spaceBetween: 16,
         freeMode: true,
         speed: 400,
+      });
+    }
+
+    // Save & Earn Swiper
+    if ($('.sae-swiper').length && typeof Swiper !== 'undefined') {
+      new Swiper('.sae-swiper', {
+        slidesPerView: 3,
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+          nextEl: '.sae-nav-next',
+          prevEl: '.sae-nav-prev',
+        },
+        speed: 600,
       });
     }
 
