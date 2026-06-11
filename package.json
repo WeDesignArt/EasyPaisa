@@ -1,0 +1,24 @@
+{
+  "name": "easypaisa_new",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeDesignArt/EasyPaisa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/WeDesignArt/EasyPaisa/issues"
+  },
+  "homepage": "https://github.com/WeDesignArt/EasyPaisa#readme",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

@@ -1,0 +1,92 @@
+:root {
+  --primary: #07ab57;
+  --primary-rgb: 7, 171, 87;
+  --brand-gray: #322d3c;
+}
+
+// == Colors ==
+$color-primary: var(--primary);
+$color-dark-green: #006B54;
+$color-white: #FFFFFF;
+$color-light-mint: #EEF8F5;
+$color-dark-text: var(--brand-gray);
+$color-muted-text: #666666;
+$color-border: #E5E5E5;
+$color-light-grey: #F5F7F8;
+$color-black: #000000;
+$color-bg-light: #FAFBFC;
+$color-purple: #6C2BD9;
+
+// == Typography ==
+$font-family-primary: 'GT Walsheim Pro', sans-serif;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-md: 1.125rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-2xl: 2rem;
+$font-size-3xl: 2.5rem;
+$font-size-4xl: 3rem;
+$font-size-5xl: 3.75rem;
+$font-size-6xl: 4.5rem;
+$font-size-7xl: 5.5rem;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+
+$line-height-tight: 1.1;
+$line-height-base: 1.5;
+$line-height-relaxed: 1.6;
+$line-height-loose: 1.8;
+
+// == Border Radius ==
+$radius-sm: 8px;
+$radius-card: 16px;
+$radius-section: 24px;
+$radius-container: 32px;
+$radius-pill: 50px;
+$radius-full: 50%;
+
+// == Shadows ==
+$shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.12);
+$shadow-hover: 0 12px 40px rgba(0, 166, 81, 0.15);
+$shadow-card: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+// == Spacing ==
+$spacer-xs: 0.25rem;
+$spacer-sm: 0.5rem;
+$spacer-md: 1rem;
+$spacer-lg: 1.5rem;
+$spacer-xl: 2rem;
+$spacer-2xl: 3rem;
+$spacer-3xl: 4rem;
+$spacer-4xl: 6rem;
+$spacer-5xl: 8rem;
+
+// == Transitions ==
+$transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+// == Z-index ==
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-offcanvas: 300;
+$z-modal: 400;
+$z-tooltip: 500;
+
+
+// == Breakpoints ==
+$breakpoint-mobile: 575.98px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;

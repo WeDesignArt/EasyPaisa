@@ -1,0 +1,117 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.swiper {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  height: auto;
+}
+
+.swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer-sm;
+  margin-top: $spacer-xl;
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: $radius-full;
+    background: rgba($color-dark-text, 0.15);
+    opacity: 1;
+    transition: $transition-base;
+    cursor: pointer;
+
+    &-active {
+      width: 28px;
+      border-radius: $radius-pill;
+      background: $color-primary;
+    }
+  }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-full;
+  background: $color-white;
+  box-shadow: $shadow-md;
+  @include flex-center;
+  z-index: 10;
+  cursor: pointer;
+  transition: $transition-base;
+
+  &::after {
+    display: none;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: $color-dark-text;
+  }
+
+  &:hover {
+    background: $color-primary;
+    box-shadow: $shadow-hover;
+
+    svg {
+      color: $color-white;
+    }
+  }
+}
+
+.swiper-button-prev {
+  left: -22px;
+}
+
+.swiper-button-next {
+  right: -22px;
+}
+
+// Security section slider
+.security-slider {
+  .swiper-pagination-bullet {
+    background: rgba(255, 255, 255, 0.3);
+
+    &-active {
+      background: $color-white;
+    }
+  }
+}
+
+// Save & earn slider
+.save-earn-slider {
+  padding: $spacer-md 0;
+
+  .swiper-slide {
+    padding: $spacer-md;
+  }
+}
+
+// Services mobile slider
+.services-slider-mobile {
+  .swiper-slide {
+    width: 260px;
+  }
+}
+
+// Product slider
+.product-slider {
+  .swiper-slide {
+    padding: $spacer-sm;
+  }
+}

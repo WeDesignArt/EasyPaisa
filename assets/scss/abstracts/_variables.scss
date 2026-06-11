@@ -1,7 +1,12 @@
 :root {
+  --brand-1: #26b15d;
+  --brand-1-rgb: 38, 177, 93;
+  --brand-2: #342e3f;
+  --brand-2-rgb: 52, 46, 63;
   --primary: #07ab57;
   --primary-rgb: 7, 171, 87;
   --brand-gray: #322d3c;
+  --about-bg: #e1f1ef;
 }
 
 // == Colors ==
@@ -32,6 +37,7 @@ $font-size-5xl: 3.75rem;
 $font-size-6xl: 4.5rem;
 $font-size-7xl: 5.5rem;
 
+$font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;

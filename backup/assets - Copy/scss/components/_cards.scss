@@ -1,0 +1,211 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+  background: $color-white;
+  border-radius: $radius-card;
+  overflow: hidden;
+  transition: $transition-base;
+}
+
+.card-elevated {
+  box-shadow: $shadow-card;
+  border-radius: $radius-card;
+  @include card-hover;
+}
+
+.card-service {
+  background: $color-light-grey;
+  border-radius: $radius-card;
+  padding: $spacer-lg;
+  transition: $transition-base;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-hover;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: $radius-sm;
+    margin-bottom: $spacer-md;
+  }
+
+  .card-title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacer-xs;
+    color: $color-dark-text;
+  }
+
+  .card-desc {
+    font-size: $font-size-sm;
+    color: $color-muted-text;
+    line-height: $line-height-base;
+    margin-bottom: $spacer-md;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.card-stat {
+  text-align: center;
+  padding: $spacer-xl $spacer-lg;
+  position: relative;
+
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 40px;
+    background: rgba($color-dark-text, 0.1);
+
+    @include respond-down('md') {
+      display: none;
+    }
+  }
+
+  .stat-number {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $color-dark-text;
+    margin-bottom: $spacer-xs;
+  }
+
+  .stat-label {
+    font-size: $font-size-xs;
+    color: $color-muted-text;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.card-floating {
+  @include glass-effect;
+  border-radius: $radius-card;
+  padding: $spacer-md $spacer-lg;
+  box-shadow: $shadow-lg;
+  @include floating-animation;
+
+  .floating-label {
+    font-size: $font-size-xs;
+    color: $color-muted-text;
+    margin-bottom: $spacer-xs;
+  }
+
+  .floating-value {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-dark-text;
+  }
+}
+
+.card-product {
+  background: $color-white;
+  border-radius: $radius-card;
+  padding: $spacer-xl;
+  box-shadow: $shadow-card;
+  text-align: center;
+  transition: $transition-base;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-hover;
+  }
+
+  .product-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: $radius-card;
+    background: rgba($color-primary, 0.1);
+    @include flex-center;
+    margin: 0 auto $spacer-md;
+    font-size: $font-size-xl;
+    color: $color-primary;
+  }
+
+  .product-title {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacer-sm;
+  }
+
+  .product-desc {
+    font-size: $font-size-sm;
+    color: $color-muted-text;
+    margin-bottom: $spacer-lg;
+  }
+
+  .product-cta {
+    color: $color-primary;
+    font-weight: $font-weight-semibold;
+    font-size: $font-size-sm;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacer-xs;
+
+    &:hover {
+      gap: $spacer-sm;
+    }
+  }
+}
+
+.card-feature {
+  background: $color-light-mint;
+  border-radius: $radius-container;
+  padding: $spacer-3xl;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-lg;
+  }
+
+  .feature-label {
+    @include pill-badge;
+    background: rgba($color-primary, 0.1);
+    color: $color-primary;
+    font-size: $font-size-xs;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacer-md;
+    align-self: flex-start;
+  }
+
+  .feature-title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacer-sm;
+  }
+
+  .feature-desc {
+    font-size: $font-size-base;
+    color: $color-muted-text;
+    margin-bottom: $spacer-xl;
+    flex: 1;
+  }
+
+  .feature-image {
+    margin-top: auto;
+    text-align: center;
+
+    img {
+      max-height: 280px;
+      object-fit: contain;
+    }
+  }
+}

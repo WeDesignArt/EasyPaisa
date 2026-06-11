@@ -1,0 +1,203 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Light.woff2') format('woff2'), url('GTWalsheimPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Regular.woff2') format('woff2'),
+    url('GTWalsheimPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Thin.woff2') format('woff2'),
+    url('GTWalsheimPro-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'GT Walsheim Pro Ultra';
+  src: url('GTWalsheimPro-UltraBold.woff2') format('woff2'),
+    url('GTWalsheimPro-UltraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Bold.woff2') format('woff2'),
+    url('GTWalsheimPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Medium.woff2') format('woff2'),
+    url('GTWalsheimPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Pro Ultra';
+  src: url('GTWalsheimPro-UltraLight.woff2') format('woff2'),
+    url('GTWalsheimPro-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GT Walsheim Pro';
+  src: url('GTWalsheimPro-Black.woff2') format('woff2'),
+    url('GTWalsheimPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: $color-dark-text;
+}
+
+.heading-xl {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-extrabold;
+  line-height: $line-height-tight;
+
+  @include respond-down('lg') {
+    font-size: $font-size-3xl;
+  }
+
+  @include respond-down('md') {
+    font-size: $font-size-2xl;
+  }
+}
+
+.heading-lg {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+
+  @include respond-down('lg') {
+    font-size: $font-size-2xl;
+  }
+
+  @include respond-down('md') {
+    font-size: $font-size-xl;
+  }
+}
+
+.heading-md {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+
+  @include respond-down('md') {
+    font-size: $font-size-lg;
+  }
+}
+
+.heading-sm {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+}
+
+.body-large {
+  font-size: $font-size-md;
+  line-height: $line-height-relaxed;
+  color: $color-muted-text;
+}
+
+.body-base {
+  font-size: $font-size-base;
+  line-height: $line-height-relaxed;
+  color: $color-muted-text;
+}
+
+.body-small {
+  font-size: $font-size-sm;
+  line-height: $line-height-loose;
+  color: $color-muted-text;
+}
+
+.text-highlight {
+  color: $color-primary;
+}
+
+.text-dark {
+  color: $color-dark-text;
+}
+
+.text-muted {
+  color: $color-muted-text;
+}
+
+.text-gradient {
+  @include text-gradient;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-label {
+  display: inline-block;
+  @include pill-badge;
+  background-color: rgba($color-primary, 0.1);
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: $font-size-xs;
+  margin-bottom: $spacer-md;
+}
+
+.section-title {
+  font-size: $font-size-3xl;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacer-md;
+
+  @include respond-down('lg') {
+    font-size: $font-size-2xl;
+  }
+
+  @include respond-down('md') {
+    font-size: $font-size-xl;
+  }
+}
+
+.section-subtitle {
+  font-size: $font-size-md;
+  color: $color-muted-text;
+  margin-bottom: $spacer-2xl;
+  max-width: 600px;
+
+  @include respond-down('md') {
+    font-size: $font-size-base;
+  }
+}

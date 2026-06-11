@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+
+
+.about-section {
+  background-position: -6px 0%;
+  background-size: 124%;
+
+  .section-overlay {
+    pointer-events: none;
+    width: 150%;
+  }
+}

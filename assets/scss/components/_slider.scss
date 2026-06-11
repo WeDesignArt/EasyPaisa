@@ -1,19 +1,6 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 
-.swiper {
-  overflow: hidden;
-}
-
-.swiper-wrapper {
-  display: flex;
-}
-
-.swiper-slide {
-  flex-shrink: 0;
-  height: auto;
-}
-
 .swiper-pagination {
   position: static;
   display: flex;

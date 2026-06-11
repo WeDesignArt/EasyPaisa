@@ -1,0 +1,173 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.footer {
+  background: $color-dark-green;
+  color: $color-white;
+  padding: $spacer-4xl 0 $spacer-xl;
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: $spacer-2xl;
+    margin-bottom: $spacer-3xl;
+
+    @include respond-down('lg') {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include respond-down('md') {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .footer-brand {
+    .footer-logo {
+      margin-bottom: $spacer-lg;
+
+      img {
+        height: 32px;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    p {
+      font-size: $font-size-sm;
+      line-height: $line-height-loose;
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 360px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: $spacer-sm;
+      margin-top: $spacer-lg;
+    }
+
+    .social-link {
+      @include flex-center;
+      width: 40px;
+      height: 40px;
+      border-radius: $radius-full;
+      background: rgba(255, 255, 255, 0.1);
+      color: $color-white;
+      font-size: $font-size-base;
+      transition: $transition-base;
+
+      &:hover {
+        background: $color-primary;
+        transform: translateY(-2px);
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  .footer-col {
+    h4 {
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $spacer-lg;
+      color: $color-white;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: $spacer-sm;
+    }
+
+    a {
+      font-size: $font-size-sm;
+      color: rgba(255, 255, 255, 0.7);
+      transition: $transition-base;
+      line-height: $line-height-loose;
+
+      &:hover {
+        color: $color-primary;
+        padding-left: 4px;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: $spacer-lg;
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $spacer-md;
+
+    @include respond-down('md') {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    p {
+      font-size: $font-size-xs;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: $spacer-lg;
+
+      @include respond-down('md') {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $spacer-md;
+      }
+
+      a {
+        font-size: $font-size-xs;
+        color: rgba(255, 255, 255, 0.5);
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  // Accordion on mobile
+  @include respond-down('md') {
+    .footer-col {
+      h4 {
+        position: relative;
+        cursor: pointer;
+        padding-right: $spacer-xl;
+        margin-bottom: 0;
+        padding: $spacer-md 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &::after {
+          content: '+';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: $font-size-lg;
+          transition: $transition-base;
+        }
+
+        &.open::after {
+          transform: translateY(-50%) rotate(45deg);
+        }
+      }
+
+      ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0;
+      }
+
+      h4.open + ul {
+        max-height: 300px;
+        padding: $spacer-md 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.container-content {
+  margin: auto;
+  max-width: 1740px;
+  width: 90%
+}
+
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+.section-padding {
+  padding-top: $spacer-5xl;
+  padding-bottom: $spacer-5xl;
+
+  @include respond-down('lg') {
+    padding-top: $spacer-4xl;
+    padding-bottom: $spacer-4xl;
+  }
+
+  @include respond-down('md') {
+    padding-top: $spacer-3xl;
+    padding-bottom: $spacer-3xl;
+  }
+}

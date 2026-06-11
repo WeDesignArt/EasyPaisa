@@ -1,0 +1,120 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacer-sm;
+  padding: $spacer-md $spacer-xl;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  border-radius: $radius-pill;
+  transition: $transition-base;
+  white-space: nowrap;
+  line-height: 1.4;
+
+  svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background: #008e44;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba($color-primary, 0.35);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: $color-dark-text;
+    border: 1.5px solid $color-border;
+
+    &:hover {
+      border-color: $color-primary;
+      color: $color-primary;
+      background: rgba($color-primary, 0.04);
+    }
+  }
+
+  &--white {
+    background: $color-white;
+    color: $color-primary;
+
+    &:hover {
+      background: #f2f2f2;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--outline-light {
+    background: transparent;
+    color: $color-white;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      border-color: $color-white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &--dark {
+    background: $color-dark-green;
+    color: $color-white;
+
+    &:hover {
+      background: #008055;
+      transform: translateY(-2px);
+    }
+  }
+
+  &--sm {
+    padding: $spacer-sm $spacer-lg;
+    font-size: $font-size-xs;
+  }
+
+  &--lg {
+    padding: $spacer-lg $spacer-2xl;
+    font-size: $font-size-md;
+  }
+
+  &--icon {
+    @include flex-center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: $radius-full;
+  }
+
+  &--arrow {
+    @include flex-center;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius-full;
+    background: $color-primary;
+    color: $color-white;
+    flex-shrink: 0;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover svg {
+      transform: translateX(3px);
+    }
+  }
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  gap: $spacer-md;
+  flex-wrap: wrap;
+}

@@ -2,11 +2,11 @@
 @use '../abstracts/mixins' as *;
 
 .services {
-  background: $color-white;
+  padding-bottom: 10%;
 
   .services-header {
     text-align: center;
-    margin-bottom: $spacer-3xl;
+    margin-bottom: $spacer-md;
 
     @include respond-down('md') {
       text-align: left;
@@ -37,11 +37,10 @@
   }
 
   .service-card {
-    background: $color-light-grey;
     border-radius: $radius-card;
-    padding: $spacer-lg;
     transition: $transition-base;
     cursor: pointer;
+    position: relative;
 
     &:hover {
       transform: translateY(-6px);
@@ -50,10 +49,9 @@
 
     .service-img-wrap {
       width: 100%;
-      height: 140px;
+      height: 300px;
       border-radius: $radius-sm;
       overflow: hidden;
-      margin-bottom: $spacer-md;
 
       img {
         width: 100%;
@@ -67,10 +65,43 @@
       transform: scale(1.05);
     }
 
+    &-content {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--about-bg);
+      padding: $spacer-lg;
+      border-radius: $radius-card;
+      z-index: 1;
+      transform: translateY(-30px);
+      position: absolute;
+      width: 100%;
+      height: calc(100% - 90px);
+      left: 0;
+      bottom: -50%;
+
+      ul {
+        padding-left: 15px;
+        margin: 0;
+      }
+
+      &-footer {
+        position: absolute;
+        bottom: $spacer-lg;
+        left: 0;
+        width: 100%;
+        padding-right: $spacer-lg;
+      }
+    }
+
     .service-title {
-      font-size: $font-size-base;
-      font-weight: $font-weight-semibold;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-medium;
       margin-bottom: $spacer-xs;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .service-desc {
@@ -92,6 +123,7 @@
       background: $color-primary;
       color: $color-white;
       transition: $transition-base;
+      padding-left: 2px;
 
       svg {
         width: 16px;

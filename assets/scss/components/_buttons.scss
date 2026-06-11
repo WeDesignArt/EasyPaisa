@@ -8,7 +8,7 @@
   gap: $spacer-sm;
   padding: $spacer-md $spacer-xl;
   font-size: $font-size-sm;
-  font-weight: $font-weight-semibold;
+  font-weight: $font-weight-medium;
   border-radius: $radius-pill;
   transition: $transition-base;
   white-space: nowrap;
@@ -31,14 +31,12 @@
   }
 
   &--secondary {
-    background: transparent;
-    color: $color-dark-text;
-    border: 1.5px solid $color-border;
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
 
     &:hover {
-      border-color: $color-primary;
-      color: $color-primary;
-      background: rgba($color-primary, 0.04);
+      background-color: rgb(var(--primary-rgb), 0.04);
     }
   }
 

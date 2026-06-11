@@ -1,0 +1,21 @@
+@use 'variables' as *;
+
+@function rem($px) {
+  @return ($px / 16) + rem;
+}
+
+@function em($px, $base: 16) {
+  @return ($px / $base) + em;
+}
+
+@function spacing($multiplier) {
+  @return $spacer-md * $multiplier;
+}
+
+@function contrast-color($bg-color) {
+  @if (lightness($bg-color) > 50) {
+    @return $color-dark-text;
+  } @else {
+    @return $color-white;
+  }
+}

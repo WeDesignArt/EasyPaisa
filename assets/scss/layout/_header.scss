@@ -147,7 +147,7 @@
     font-weight: $font-weight-medium;
     color: $color-white;
     background: $color-primary;
-    border-radius: $radius-pill;
+    border-radius: $radius-card;
     transition: $transition-base;
 
     @include respond-down('lg') {
@@ -186,6 +186,7 @@
   }
 
   ul {
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -272,4 +273,13 @@
     padding-right: $spacer-sm;
     margin-right: $spacer-sm;
   }
+}
+
+.section-label {
+  background-color: rgb(var(--primary-rgb), 0.1);
+  display: inline-block;
+  @include pill-badge;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-xs;
 }

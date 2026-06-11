@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro';
-  src: url('GTWalsheimPro-Light.woff2') format('woff2'), url('GTWalsheimPro-Light.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-Light.woff2') format('woff2'), url('../fonts/GTWalsheimPro-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -12,8 +12,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro';
-  src: url('GTWalsheimPro-Regular.woff2') format('woff2'),
-    url('GTWalsheimPro-Regular.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-Regular.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -21,8 +21,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro';
-  src: url('GTWalsheimPro-Thin.woff2') format('woff2'),
-    url('GTWalsheimPro-Thin.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-Thin.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-Thin.woff') format('woff');
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -31,8 +31,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro Ultra';
-  src: url('GTWalsheimPro-UltraBold.woff2') format('woff2'),
-    url('GTWalsheimPro-UltraBold.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-UltraBold.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-UltraBold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
@@ -40,8 +40,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro';
-  src: url('GTWalsheimPro-Bold.woff2') format('woff2'),
-    url('GTWalsheimPro-Bold.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-Bold.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-Bold.woff') format('woff');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -49,8 +49,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro';
-  src: url('GTWalsheimPro-Medium.woff2') format('woff2'),
-    url('GTWalsheimPro-Medium.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-Medium.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -58,8 +58,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro Ultra';
-  src: url('GTWalsheimPro-UltraLight.woff2') format('woff2'),
-    url('GTWalsheimPro-UltraLight.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-UltraLight.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-UltraLight.woff') format('woff');
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -67,8 +67,8 @@
 
 @font-face {
   font-family: 'GT Walsheim Pro';
-  src: url('GTWalsheimPro-Black.woff2') format('woff2'),
-    url('GTWalsheimPro-Black.woff') format('woff');
+  src: url('../fonts/GTWalsheimPro-Black.woff2') format('woff2'),
+    url('../fonts/GTWalsheimPro-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -81,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   line-height: $line-height-tight;
   color: $color-dark-text;
 }
@@ -153,17 +153,11 @@ h6 {
   color: $color-dark-text;
 }
 
-.text-muted {
-  color: $color-muted-text;
-}
 
 .text-gradient {
   @include text-gradient;
 }
 
-.text-center {
-  text-align: center;
-}
 
 .section-label {
   display: inline-block;
@@ -178,9 +172,9 @@ h6 {
 }
 
 .section-title {
-  font-size: $font-size-3xl;
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacer-md;
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-medium;
+  margin-bottom: calc($spacer-md + 1.5rem);
 
   @include respond-down('lg') {
     font-size: $font-size-2xl;
@@ -189,15 +183,34 @@ h6 {
   @include respond-down('md') {
     font-size: $font-size-xl;
   }
+
+  .title-img {
+    width: 230px;
+    transform: translateY(14px);
+    height: auto;
+  }
 }
 
 .section-subtitle {
-  font-size: $font-size-md;
-  color: $color-muted-text;
-  margin-bottom: $spacer-2xl;
+  display: inline-block;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  color: var(--brand-gray);
   max-width: 600px;
 
   @include respond-down('md') {
     font-size: $font-size-base;
+  }
+}
+
+.section-description {
+  font-size: $font-size-lg;
+  color: #000;
+  line-height: $line-height-relaxed;
+  margin-bottom: $spacer-2xl;
+  max-width: 650px;
+
+  @include respond-down('md') {
+    font-size: $font-size-sm;
   }
 }
