@@ -2496,5 +2496,9 @@ margin-bottom: 16px;
     height: auto !important;
 }
 
+.btn--secondary {
+    width: 100%;
+}
 
- }
+
+}
