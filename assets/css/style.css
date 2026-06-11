@@ -2499,4 +2499,40 @@ margin-bottom: 16px;
 .btn--secondary {
     width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+}
+/* Ensure the section adjusts according to content on mobile */
+@media (max-width: 991.98px) {
+  #hero {
+    height: auto !important; /* Agar height fix ki hui hai toh auto kar dein */
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Sab cheezein vertical line mei chalengi */
+  }
+
+  /* Mobile image adjustments */
+  .hero-main-image-mobile {
+    position: relative !important; /* Absolute hatana zaroori hai taake text ke neeche aaye */
+    width: 100vw; /* Full screen width edge-to-edge */
+    margin-left: calc(-50vw + 50%); /* Agar parent container abhi bhi bound kar raha ho, toh edge-to-edge push karega */
+    margin-top: 30px; /* Buttons se thoda gap rakhne ke liye */
+    left: 0;
+    right: 0;
+  }
+
+  .hero-main-image-mobile img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
 }
