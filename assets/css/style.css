@@ -219,6 +219,7 @@
     color: #322d3c;
     line-height: 1.5;
     margin: 0;
+        width: 50%;
 }
 
 /* Right: photo fills area, notif cards float on it */
@@ -1505,7 +1506,7 @@ margin-bottom: 16px;
     .footer-app-banner {
         height: auto;
         padding: 40px 0;
-        margin-top: 40px;
+        margin-top: 0;
     }
 
     .banner-inner-container {
@@ -2122,20 +2123,25 @@ margin-bottom: 16px;
         padding: 32px 24px 24px;
     }
     .st-big-num {
-        font-size: 64px;
+        font-size: 6.5vh;
         letter-spacing: -1px;
         margin-bottom: 12px;
+        text-align: center;
+        font-weight: 700;
+
     }
     .st-big-desc {
-        font-size: 17px;
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
     }
     .st-right {
-        height: 240px;
+        height: 237px;
         min-height: unset;
     }
-    .st-right > img {
+    /* .st-right > img {
         object-position: top center;
-    }
+    } */
     /* Stats bar → 2 × 2 grid */
     .st-bar {
         flex-wrap: wrap;
@@ -2147,7 +2153,7 @@ margin-bottom: 16px;
     .st-bar-item {
         width: 50%;
         padding: 20px 12px;
-        border-bottom: 1px solid rgba(0,0,0,0.06);
+        /* border-bottom: 1px solid rgba(0,0,0,0.06); */
     }
     .st-bar-item:nth-child(odd) {
         border-right: 1px solid rgba(0,0,0,0.06);
@@ -2156,7 +2162,7 @@ margin-bottom: 16px;
         font-size: 26px;
     }
     .st-bar-label {
-        font-size: 13px;
+        font-size: 10px;
     }
     .st-bar-desc {
         font-size: 11px;
@@ -2396,13 +2402,14 @@ margin-bottom: 16px;
 }
 
 .security-mobile .shield-icon img {
-    max-width: 200px;
+    max-width: 235px;
     height: auto;
 }
 
 .security-mobile .section-title {
-    font-size: 40px;
+    font-size: 42px;
     line-height: 1.2;
+    font-weight: 700;
 }
 
 /* Slide card — frosted-glass style on the dark background */
@@ -2502,10 +2509,63 @@ margin-bottom: 16px;
 
 
 
+.hero .hero-content {
+    align-items: center !important;
+    text-align: center !important;
+}
 
 
+    .services .services-header {
+        text-align: center !important;
+    }
 
+.services-header h2{
+    font-size: 42px !important;
+    font-weight: 700 !important;
+    text-wrap-style: balance;
+}
 
+    .services .service-card-content {
+        width: 103%;
+    }
+
+.services-header p {
+    text-wrap-style: balance;
+}
+
+.wallet-banner-title {
+    font-size: 42px;
+    text-align: center;
+}
+
+.wallet-banner-desc {
+    font-size: 16px;
+    text-align: center;
+    text-wrap-style: balance;
+}
+
+.mini-card{
+    text-align: center;
+    align-items: center;
+}
+
+.cards-promo .mini-card .mini-label {
+    align-self: center !important;
+}
+.mini-desc::after {
+    margin-inline: auto;
+}
+.cards-promo .mini-card {
+    padding: 2rem;
+}
+.cards-promo .mini-card .mini-image img {
+    max-height: 300px;
+}
+
+.mini-desc {
+    font-size: 16px !important;
+
+}
 
 
 
