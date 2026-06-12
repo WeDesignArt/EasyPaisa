@@ -135,20 +135,24 @@ if ($(".sae-swiper").length && typeof Swiper !== "undefined") {
   });
 }
 
-    // Services Mobile Slider
-    if ($(".services-slider-mobile").length && typeof Swiper !== "undefined") {
-      new Swiper(".services-slider-mobile", {
-        slidesPerView: "auto",
-        spaceBetween: 16,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        grabCursor: true,
-        speed: 500,
-      });
-    }
+    // Services Mobile Slider — init on window load so dimensions are fully computed
+    $(window).on("load", function () {
+      if ($(".services-slider-mobile").length && typeof Swiper !== "undefined") {
+        new Swiper(".services-slider-mobile", {
+          slidesPerView: "auto",
+          spaceBetween: 16,
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          grabCursor: true,
+          speed: 500,
+          observer: true,
+          observeParents: true,
+        });
+      }
+    });
 
     // Product Slider
     if ($(".product-slider").length && typeof Swiper !== "undefined") {

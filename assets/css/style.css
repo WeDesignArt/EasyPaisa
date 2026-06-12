@@ -1,3 +1,7 @@
+﻿html, body {
+    overflow-x: hidden !important;
+}
+
 .header .nav-menu{
     list-style: none;
 }
@@ -28,7 +32,7 @@
     z-index: 2;
 }
 
-/* Fixed decorative icon — bottom-left of section */
+/* Fixed decorative icon â€” bottom-left of section */
 .sec-icon-fixed {
     position: absolute;
     left: 324px;
@@ -76,7 +80,7 @@
     max-width: 580px;
 }
 
-/* Pagination — centered */
+/* Pagination â€” centered */
 .sec-pagination {
     position: relative !important;
     /* bottom: auto !important; */
@@ -101,7 +105,7 @@
     transform: scale(1.3);
 }
 
-/* Learn more button — centered */
+/* Learn more button â€” centered */
 .sec-btn-wrap {
     margin-top: 36px;
     text-align: center;
@@ -410,7 +414,7 @@
    SAVE & EARN
 ============================================================ */
 
-/* Dark wrapper — header only; extra bottom padding makes room for card overlap */
+/* Dark wrapper â€” header only; extra bottom padding makes room for card overlap */
 .sae-wrapper {
     background: #322d3c;
     border-radius: 24px;
@@ -543,7 +547,7 @@
     display: block;
 }
 
-/* Body is flex column; desc takes flex:1 → btn always at bottom */
+/* Body is flex column; desc takes flex:1 â†’ btn always at bottom */
 .sae-card-body {
     display: flex;
     flex-direction: column;
@@ -2040,8 +2044,8 @@ margin-bottom: 16px;
 
 
 /* ============================================================
-   MOBILE RESPONSIVE  (≤ 767px)
-   Desktop layout is untouched — all rules below only fire
+   MOBILE RESPONSIVE  (â‰¤ 767px)
+   Desktop layout is untouched â€” all rules below only fire
    on phones / small tablets.
 ============================================================ */
 @media (max-width: 767px) {
@@ -2080,7 +2084,7 @@ margin-bottom: 16px;
 }
    
 
-    /* ── Security Slider ──────────────────────────────────── */
+    /* â”€â”€ Security Slider â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .sec-section {
         min-height: auto;
         padding: 56px 0 48px;
@@ -2110,7 +2114,7 @@ margin-bottom: 16px;
         margin-top: 20px;
     }
 
-    /* ── Statistics ───────────────────────────────────────── */
+    /* â”€â”€ Statistics â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .st-section {
         padding: 48px 0 56px;
     }
@@ -2142,7 +2146,7 @@ margin-bottom: 16px;
     /* .st-right > img {
         object-position: top center;
     } */
-    /* Stats bar → 2 × 2 grid */
+    /* Stats bar â†’ 2 Ã— 2 grid */
     .st-bar {
         flex-wrap: wrap;
         padding: 8px 0;
@@ -2171,7 +2175,7 @@ margin-bottom: 16px;
         display: none;
     }
 
-    /* ── Save & Earn ──────────────────────────────────────── */
+    /* â”€â”€ Save & Earn â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .sae-wrapper {
         padding: 40px 20px 200px;
         border-radius: 20px;
@@ -2215,7 +2219,7 @@ margin-bottom: 16px;
 
 
 
-    /* ── Footer (aik-footer) ──────────────────────────────── */
+    /* â”€â”€ Footer (aik-footer) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .aik-footer {
         padding-top: 40px;
     }
@@ -2265,7 +2269,7 @@ margin-bottom: 16px;
         gap: 55px;
     }
 
-    /* ── Search Drawer ────────────────────────────────────── */
+    /* â”€â”€ Search Drawer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
     .srch-drawer {
         padding: 20px 0 28px;
     }
@@ -2393,7 +2397,7 @@ margin-bottom: 16px;
 
 /* ============================================================
    Security Mobile Section  (.security-mobile)
-   Only shown on mobile via d-block d-lg-none — no media query
+   Only shown on mobile via d-block d-lg-none â€” no media query
    needed around these rules.
 ============================================================ */
 
@@ -2412,7 +2416,7 @@ margin-bottom: 16px;
     font-weight: 700;
 }
 
-/* Slide card — frosted-glass style on the dark background */
+/* Slide card â€” frosted-glass style on the dark background */
 .security-mobile .security-slide {
     /* background: rgba(255, 255, 255, 0.12); */
     /* border: 1px solid rgba(255, 255, 255, 0.22); */
@@ -2596,3 +2600,9 @@ margin-bottom: 16px;
     object-fit: cover;
   }
 }
+
+/* Fix Services Swiper horizontal overflow */
+.services-slider-mobile {
+    overflow: hidden !important;
+}
+
